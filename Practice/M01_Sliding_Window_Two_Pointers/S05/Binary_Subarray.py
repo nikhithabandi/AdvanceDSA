@@ -32,3 +32,14 @@ class Solution:
         return ans
 
 # 930. Binary Subarrays With Sum
+class Solution:
+    def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
+        count=0
+        for i in range(len(nums)):
+            s=0
+            for j in range(i,len(nums)):
+                s+=nums[j]
+                if s==goal:
+                    count +=1
+        return count
+            
