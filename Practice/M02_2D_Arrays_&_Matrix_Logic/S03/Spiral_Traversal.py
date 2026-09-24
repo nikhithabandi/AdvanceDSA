@@ -29,42 +29,4 @@ class Solution:
         return res
 
     
-# 59
-class Solution:
-    def generateMatrix(self, n: int) -> list[list[int]]:
-        # Initialize an n x n matrix with zeros
-        matrix = [[0] * n for _ in range(n)]
-        
-        # Define boundaries
-        top, bottom = 0, n - 1
-        left, right = 0, n - 1
-        
-        # Start filling from 1 up to n^2
-        num = 1
-        
-        while top <= bottom and left <= right:
-            # 1. Traverse from left to right across the top row
-            for col in range(left, right + 1):
-                matrix[top][col] = num
-                num += 1
-            top += 1  # Move the top boundary down
-            
-            # 2. Traverse from top to bottom down the right column
-            for row in range(top, bottom + 1):
-                matrix[row][right] = num
-                num += 1
-            right -= 1  # Move the right boundary left
-            
-            # 3. Traverse from right to left across the bottom row
-            for col in range(right, left - 1, -1):
-                matrix[bottom][col] = num
-                num += 1
-            bottom -= 1  # Move the bottom boundary up
-            
-            # 4. Traverse from bottom to top up the left column
-            for row in range(bottom, top - 1, -1):
-                matrix[row][left] = num
-                num += 1
-            left += 1  # Move the left boundary right
-            
-        return matrix
+;
