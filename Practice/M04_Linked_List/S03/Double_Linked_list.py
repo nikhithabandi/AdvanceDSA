@@ -6,7 +6,7 @@ Node --> 3 parts
 2.Previous 
 3.Next
 
-Algorith:
+Algorithm:
 1. Create a node
 2. Insert a node 
 3. Connection
